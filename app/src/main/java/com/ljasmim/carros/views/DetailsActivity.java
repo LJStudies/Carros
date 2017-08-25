@@ -2,6 +2,7 @@ package com.ljasmim.carros.views;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.ljasmim.carros.R;
@@ -25,7 +26,9 @@ public class DetailsActivity extends AppCompatActivity {
         this.mViewHolder = new ViewHolder();
         this.mCarMock = new CarMock(this);
 
+        this.mViewHolder.imageCar = (ImageView) this.findViewById(R.id.image_car);
         this.mViewHolder.textModel = (TextView) this.findViewById(R.id.text_model);
+        this.mViewHolder.textManufacturer = (TextView) this.findViewById(R.id.text_manufacturer);
         this.mViewHolder.textPower = (TextView) this.findViewById(R.id.text_power);
         this.mViewHolder.textPrice = (TextView) this.findViewById(R.id.text_price);
 
@@ -46,9 +49,14 @@ public class DetailsActivity extends AppCompatActivity {
      * Carrega os valores do Carro para os elementos de layout
      */
     private void setData() {
+
+        String stPrice = String.format("%,.2f", this.mCar.getPrice());
+
+        this.mViewHolder.imageCar.setImageDrawable(this.mCar.getPicture());
         this.mViewHolder.textModel.setText(this.mCar.getModel());
+        this.mViewHolder.textManufacturer.setText(this.mCar.getManufacturer());
         this.mViewHolder.textPower.setText(String.valueOf(this.mCar.getPower()));
-        this.mViewHolder.textPrice.setText(String.valueOf(this.mCar.getPrice()));
+        this.mViewHolder.textPrice.setText("R$ " + stPrice);
     }
 
     /***
@@ -62,7 +70,9 @@ public class DetailsActivity extends AppCompatActivity {
     }
 
     private static class ViewHolder {
+        ImageView imageCar;
         TextView textModel;
+        TextView textManufacturer;
         TextView textPower;
         TextView textPrice;
     }

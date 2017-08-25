@@ -8,36 +8,65 @@
     android:padding="@dimen/activity_padding"
     tools:context="com.ljasmim.carros.views.DetailsActivity">
 
-    <TextView
-        android:layout_width="match_parent"
+    <ImageView
+        android:id="@+id/image_car"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/modelo"/>
+        android:layout_gravity="center_horizontal"
+
+        android:src="@drawable/audir8" />
+
     <TextView
         android:id="@+id/text_model"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/modelo"/>
+        android:layout_gravity="center_horizontal"
+
+        android:text="@string/modelo"
+        android:textAllCaps="true"
+        android:textSize="@dimen/text_large"
+        android:textStyle="bold" />
 
     <TextView
-        android:layout_width="match_parent"
+        android:id="@+id/text_manufacturer"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:text="@string/potencia"/>
+        android:layout_gravity="center_horizontal"
+
+        android:text="@string/fabricante" />
+
     <TextView
         android:id="@+id/text_power"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/potencia"/>
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+
+        android:text="1000"
+        android:textSize="@dimen/text_xxlarge"
+        android:textStyle="bold" />
 
     <TextView
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:text="@string/preco"/>
+        android:layout_gravity="center_horizontal"
+        android:text="@string/potencia" />
+
     <TextView
         android:id="@+id/text_price"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/preco"/>
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+
+        android:text="@string/preco"
+        android:textColor="@color/colorRedPrimary"
+        android:textSize="@dimen/text_xlarge" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/preco" />
 
 </LinearLayout>
