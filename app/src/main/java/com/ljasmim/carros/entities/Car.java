@@ -1,6 +1,7 @@
 package com.ljasmim.carros.entities;
 
 /**
+ * Classe que representa a Entidade Carro
  * Created by ljasmim on 25/08/17.
  */
 

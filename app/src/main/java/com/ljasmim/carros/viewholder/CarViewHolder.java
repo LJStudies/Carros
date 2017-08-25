@@ -8,6 +8,8 @@ import com.ljasmim.carros.R;
 import com.ljasmim.carros.entities.Car;
 
 /**
+ * Classe para utilização do padrão ViewHolder pelo RecyclerView, encapsulando os elementos de
+ * layout de cada linha da lista.
  * Created by ljasmim on 25/08/17.
  */
 

@@ -13,6 +13,7 @@ import com.ljasmim.carros.viewholder.CarViewHolder;
 import java.util.List;
 
 /**
+ * Adapter para a RecyclerView
  * Created by ljasmim on 25/08/17.
  */
 
