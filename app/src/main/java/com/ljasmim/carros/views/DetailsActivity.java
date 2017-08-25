@@ -20,6 +20,8 @@ public class DetailsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_details);
 
+        this.loadIcon();
+
         this.mViewHolder = new ViewHolder();
         this.mCarMock = new CarMock();
 
@@ -29,6 +31,15 @@ public class DetailsActivity extends AppCompatActivity {
 
         this.getDataFromActivity();
         this.setData();
+    }
+
+    /***
+     * Carrega o ícone na tela
+     */
+    private void loadIcon() {
+        getSupportActionBar().setDisplayShowTitleEnabled(false); //Desativa o título
+        getSupportActionBar().setDisplayShowHomeEnabled(true); //Ativa Icone
+        getSupportActionBar().setIcon(R.mipmap.ic_launcher); // Carrega o Icone
     }
 
     /***
@@ -45,12 +56,12 @@ public class DetailsActivity extends AppCompatActivity {
      */
     private void getDataFromActivity() {
         Bundle extras = getIntent().getExtras();
-        if(extras != null){
+        if (extras != null) {
             this.mCar = this.mCarMock.getById(extras.getInt(CarroConstantes.CARRO_ID));
         }
     }
 
-    private static class ViewHolder{
+    private static class ViewHolder {
         TextView textModel;
         TextView textPower;
         TextView textPrice;

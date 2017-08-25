@@ -27,6 +27,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        this.loadIcon();
+
         this.mViewHolder = new ViewHolder();
         this.mContext = this;
 
@@ -57,6 +59,15 @@ public class MainActivity extends AppCompatActivity {
 
         //Definir Layout
         this.mViewHolder.recyclerCars.setLayoutManager(new LinearLayoutManager(this));
+    }
+
+    /***
+     * Carrega o icone na tela
+     */
+    private void loadIcon() {
+        getSupportActionBar().setDisplayShowTitleEnabled(false); //Desativa o título
+        getSupportActionBar().setDisplayShowHomeEnabled(true); //Ativa Icone
+        getSupportActionBar().setIcon(R.mipmap.ic_launcher); // Carrega o Icone
     }
 
     private static class ViewHolder {
