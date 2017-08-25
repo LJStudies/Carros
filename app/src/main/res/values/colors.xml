@@ -4,8 +4,11 @@
     <color name="colorPrimaryDark">#303F9F</color>
 
     <color name="colorAccent">#FF4081</color>
+
     <color name="colorRedPrimary">#E53935</color>
     <color name="colorRedPrimaryDark">#B71C1C</color>
     <color name="colorBackLight">#F1F1F1</color>
+
+    <color name="colorPrimaryBlueLight">#3a82df</color>
 
 </resources>

@@ -2,6 +2,7 @@ package com.ljasmim.carros.viewholder;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.ljasmim.carros.R;
@@ -17,10 +18,14 @@ import com.ljasmim.carros.listener.OnListClickInteractionListener;
 public class CarViewHolder extends RecyclerView.ViewHolder {
 
     private TextView mTextModel;
+    private TextView mTextDetails;
+    private ImageView mImageCar;
 
     public CarViewHolder(View itemView) {
         super(itemView);
         this.mTextModel = (TextView) itemView.findViewById(R.id.text_model);
+        this.mTextDetails = (TextView) itemView.findViewById(R.id.text_details);
+        this.mImageCar = (ImageView) itemView.findViewById(R.id.image_car);
     }
 
     /***
@@ -34,7 +39,7 @@ public class CarViewHolder extends RecyclerView.ViewHolder {
         this.mTextModel.setText("Modelo: " + car.getModel() + " - Price: " + car.getPrice());
 
         //Chama a implementação do método onClick feita na Activity
-        this.mTextModel.setOnClickListener(new View.OnClickListener() {
+        this.mTextDetails.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 listener.onClick(car.getId());
