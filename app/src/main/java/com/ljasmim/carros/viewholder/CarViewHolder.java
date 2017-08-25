@@ -6,6 +6,7 @@ import android.widget.TextView;
 
 import com.ljasmim.carros.R;
 import com.ljasmim.carros.entities.Car;
+import com.ljasmim.carros.listener.OnListClickInteractionListener;
 
 /**
  * Classe para utilização do padrão ViewHolder pelo RecyclerView, encapsulando os elementos de
@@ -23,8 +24,16 @@ public class CarViewHolder extends RecyclerView.ViewHolder {
         this.mTextModel = (TextView) itemView.findViewById(R.id.text_model);
     }
 
-
-    public void bindData(Car car) {
+    public void bindData(final Car car, final OnListClickInteractionListener listener) {
+        //Ajusta o elemento de interface
         this.mTextModel.setText("Modelo: " + car.getModel() + " - Price: " + car.getPrice());
+
+        //Chama a implementação do método onClick feita na Activity
+        this.mTextModel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                listener.onClick(car.getId());
+            }
+        });
     }
 }
