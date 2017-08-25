@@ -5,6 +5,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.ljasmim.carros.R;
+import com.ljasmim.carros.entities.Car;
 
 /**
  * Created by ljasmim on 25/08/17.
@@ -21,4 +22,7 @@ public class CarViewHolder extends RecyclerView.ViewHolder {
     }
 
 
+    public void bindData(Car car) {
+        this.mTextModel.setText("Modelo: " + car.getModel() + " - Price: " + car.getPrice());
+    }
 }
