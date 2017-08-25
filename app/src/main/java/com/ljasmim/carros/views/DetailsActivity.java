@@ -50,13 +50,13 @@ public class DetailsActivity extends AppCompatActivity {
      */
     private void setData() {
 
-        String stPrice = String.format("%,.2f", this.mCar.getPrice());
+        String stPrice = String.format("R$ %,.2f", this.mCar.getPrice());
 
         this.mViewHolder.imageCar.setImageDrawable(this.mCar.getPicture());
         this.mViewHolder.textModel.setText(this.mCar.getModel());
         this.mViewHolder.textManufacturer.setText(this.mCar.getManufacturer());
         this.mViewHolder.textPower.setText(String.valueOf(this.mCar.getPower()));
-        this.mViewHolder.textPrice.setText("R$ " + stPrice);
+        this.mViewHolder.textPrice.setText(stPrice);
     }
 
     /***
