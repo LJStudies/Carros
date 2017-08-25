@@ -6,7 +6,10 @@ package com.ljasmim.carros.listener;
  */
 
 public interface OnListClickInteractionListener {
-
+    /***
+     * Assinatura do método que executa um evento de clique
+     * @param id Identificador do objeto (Carro) acionado.
+     */
     public void onClick(int id);
 
 }

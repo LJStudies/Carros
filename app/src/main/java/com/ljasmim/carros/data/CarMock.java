@@ -14,6 +14,9 @@ public class CarMock {
 
     private List<Car> mListCar;
 
+    /***
+     * Gera a lista de carros para teste
+     */
     public CarMock() {
         this.mListCar = new ArrayList<>();
         for (int i = 0; i<100; i++){

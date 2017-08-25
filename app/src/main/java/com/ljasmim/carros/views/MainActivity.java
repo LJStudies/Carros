@@ -19,7 +19,7 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
-    private ViewHolder mViewHolder = new ViewHolder();
+    private ViewHolder mViewHolder;
     private Context mContext;
 
     @Override
@@ -27,8 +27,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        this.mViewHolder = new ViewHolder();
         this.mContext = this;
 
+        //Obtém os dados do Mock
         CarMock carMock = new CarMock();
         List<Car> carList = new ArrayList<>();
         carList.addAll(carMock.getList());
@@ -55,7 +57,6 @@ public class MainActivity extends AppCompatActivity {
 
         //Definir Layout
         this.mViewHolder.recyclerCars.setLayoutManager(new LinearLayoutManager(this));
-
     }
 
     private static class ViewHolder {

@@ -20,10 +20,15 @@ public class CarViewHolder extends RecyclerView.ViewHolder {
 
     public CarViewHolder(View itemView) {
         super(itemView);
-
         this.mTextModel = (TextView) itemView.findViewById(R.id.text_model);
     }
 
+    /***
+     * Carrega a RecyclerView com os dados e com o evento de clique.
+     * @param car Objeto com as informações do carro
+     * @param listener Implementação do onClickListener que será executada quando uma linha
+     *                 do RecyclerView for acionada.
+     */
     public void bindData(final Car car, final OnListClickInteractionListener listener) {
         //Ajusta o elemento de interface
         this.mTextModel.setText("Modelo: " + car.getModel() + " - Price: " + car.getPrice());
