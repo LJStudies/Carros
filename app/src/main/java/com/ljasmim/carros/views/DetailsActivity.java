@@ -23,7 +23,7 @@ public class DetailsActivity extends AppCompatActivity {
         this.loadIcon();
 
         this.mViewHolder = new ViewHolder();
-        this.mCarMock = new CarMock();
+        this.mCarMock = new CarMock(this);
 
         this.mViewHolder.textModel = (TextView) this.findViewById(R.id.text_model);
         this.mViewHolder.textPower = (TextView) this.findViewById(R.id.text_power);

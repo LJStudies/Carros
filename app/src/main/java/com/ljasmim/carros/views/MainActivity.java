@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         this.mContext = this;
 
         //Obtém os dados do Mock
-        CarMock carMock = new CarMock();
+        CarMock carMock = new CarMock(this);
         List<Car> carList = new ArrayList<>();
         carList.addAll(carMock.getList());
 
@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
      * Carrega o icone na tela
      */
     private void loadIcon() {
-        getSupportActionBar().setDisplayShowTitleEnabled(false); //Desativa o título
+        getSupportActionBar().setDisplayShowTitleEnabled(true); // Ativa o título
         getSupportActionBar().setDisplayShowHomeEnabled(true); //Ativa Icone
         getSupportActionBar().setIcon(R.mipmap.ic_launcher); // Carrega o Icone
     }

@@ -36,7 +36,8 @@ public class CarViewHolder extends RecyclerView.ViewHolder {
      */
     public void bindData(final Car car, final OnListClickInteractionListener listener) {
         //Ajusta o elemento de interface
-        this.mTextModel.setText("Modelo: " + car.getModel() + " - Price: " + car.getPrice());
+        this.mTextModel.setText(car.getModel());
+        this.mImageCar.setImageDrawable(car.getPicture());
 
         //Chama a implementação do método onClick feita na Activity
         this.mTextDetails.setOnClickListener(new View.OnClickListener() {
