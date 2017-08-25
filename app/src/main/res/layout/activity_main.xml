@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="@dimen/activity_padding"
-    tools:context="com.ljasmim.carros.MainActivity">
+    tools:context="com.ljasmim.carros.views.MainActivity">
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recycler_cars"
