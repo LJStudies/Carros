@@ -21,7 +21,7 @@ public class DetailsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_details);
 
-        this.loadIcon();
+        this.loadActionBar();
 
         this.mViewHolder = new ViewHolder();
         this.mCarMock = new CarMock(this);
@@ -39,7 +39,7 @@ public class DetailsActivity extends AppCompatActivity {
     /***
      * Carrega o ícone na tela
      */
-    private void loadIcon() {
+    private void loadActionBar() {
         getSupportActionBar().setDisplayShowTitleEnabled(false); //Desativa o título
         getSupportActionBar().setDisplayShowHomeEnabled(true); //Ativa Icone
         getSupportActionBar().setIcon(R.mipmap.ic_launcher); // Carrega o Icone
